@@ -14,7 +14,3 @@ security:
 profiler:
   base:
     url: ${PROFILER_BASE_URL:http://profiler-service}
-eureka:
-  client:
-    service-url:
-      defaultZone: ${EUREKA_CLIENT_SERVICE_URL_DEFAULT_ZONE:http://localhost:8671/eureka/}
