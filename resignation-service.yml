@@ -4,7 +4,7 @@ spring:
     username: ${DATABASE_USERNAME:resignation_service_db_tech_username}
     password: ${DATABASE_PASSWORD:pass}
 server:
-  port: ${SERVER_PORT:8091}
+  port: ${SERVER_PORT:0}
 accounting:
   base:
     url: ${ACCOUNTING_BASE_URL:http://accounting-service}
