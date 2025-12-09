@@ -1,3 +1,7 @@
+spring:
+  kafka:
+    bootstrap-servers: localhost:9093,localhost:9095,localhost:9097
+
 kafka-topics:
   resignation:
     event:
@@ -19,6 +23,7 @@ kafka-topics:
       min-in-sync-replicas: 2
 
 kafka-routes:
-  accounting: ${kafka-topics.accounting.command.name}
-  security: ${kafka-topics.security.command.name}
-  resignation: ${kafka-topics.resignation.event.name}
+  routes:
+    accounting: ${kafka-topics.accounting.command.name}
+    security: ${kafka-topics.security.command.name}
+    resignation: ${kafka-topics.resignation.event.name}
