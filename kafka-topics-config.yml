@@ -21,9 +21,16 @@ kafka-topics:
       partitions: 3
       replicas: 3
       min-in-sync-replicas: 2
+  notification:
+    command:
+      name: jdmik11.notification.command
+      partitions: 3
+      replicas: 3
+      min-in-sync-replicas: 2
 
 kafka-routes:
   routes:
     accounting: ${kafka-topics.accounting.command.name}
     security: ${kafka-topics.security.command.name}
     resignation: ${kafka-topics.resignation.event.name}
+    notification: ${kafka-topics.notification.command.name}
